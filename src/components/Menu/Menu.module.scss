@@ -1,0 +1,87 @@
+* {
+  transition: all .04s ease-in-out;
+}
+
+.menu {
+  position: relative;
+  padding: 50px 40px 50px 40px;
+  width: calc(35vw + 100px);
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background: var(--main-menu-bg);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background-color: var(--main-button);
+  border: 0;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    content: '';
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 489.713 489.713' style='enable-background:new 0 0 489.713 489.713;' xml:space='preserve'%3e%3cg%3e%3cpath d='M483.4,454.444l-121.3-121.4c28.7-35.2,46-80,46-128.9c0-112.5-91.5-204.1-204.1-204.1S0,91.644,0,204.144 s91.5,204,204.1,204c48.8,0,93.7-17.3,128.9-46l121.3,121.3c8.3,8.3,20.9,8.3,29.2,0S491.8,462.744,483.4,454.444z M40.7,204.144 c0-90.1,73.2-163.3,163.3-163.3s163.4,73.3,163.4,163.4s-73.3,163.4-163.4,163.4S40.7,294.244,40.7,204.144z'/%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.input {
+  background: none;
+  display: block;
+  width: 80%;
+  outline: none;
+  padding: 10px 0;
+  margin-top: -6px;
+  border: 0;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+
+  &::placeholder {
+    color: var(--main-color);
+  }
+}
+
+.items {
+  overflow: auto;
+  height: 85vh;
+}
+
+@media (max-width: 1100px) {
+  .items {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    width: 100%;
+  }
+
+  .items {
+    height: calc(70vh - 30px);
+  }
+}
+
+@media (max-width: 450px) {
+  .items {
+    height: 55vh;
+  }
+}
